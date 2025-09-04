@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title> 
+    {% endblock %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css')}}">
+
+</head>
+
+
+<body>
+    <div class="maincontent">
+        <div class="navbar">
+            <div class="menu">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/monev">Monev</a></li>
+                    <li><a href="/pdrb_lapus">PBRD Lapangan Usaha</a></li>
+                    <li><a href="/pdrb_pengeluaran">PDRB Pengeluaran</a></li>
+                    <li><a href="/data_source">Data Source Archive</a></li>
+                    <li><a href="/admin_teknis">Administrasi dan Teknis</a></li>
+                    <li><a href="/panduan">Panduan</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content">
+             <!--TODO: ganti dengan content beneran-->
+            {% block content %}
+            {% endblock%}
+        </div>
+            
+
+         <div class="footer">
+            <div class='footer-logo'> 
+                <!-- <image src="{{ url_for('static',filename='images/logo_bps.png')}}">                                                                                                                                                                           
+                    LOGO BPS                                                                      -->
+                     LOGO BPS     
+                </div>
+
+        <div class='footer-description'>
+                <div>
+                    BADAN PUSAT STATISTIK
+                </div>   
+                <div>
+                    KABUPATEN KEPULAUAN TANIMBAR
+                </div>
+                <div>
+                    Jalan Ir. Soekarno - Saumlaki
+                </div> 
+                <div>  Telp/ Fax : (0918) 21945 </div>
+                <div> Homepage: http/mtbkab.bps.go.id, E-mail : bps8101@bps.go.id </div>
+             </div>
+            </div>
+    </div>
+</body>
+</html>

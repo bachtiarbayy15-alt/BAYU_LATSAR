@@ -1,0 +1,23 @@
+{% extends "base.html" %} 
+
+{% block title %} PDRB Pengeluaran {% endblock %}
+
+{% block content %}
+<div class="judul_konten"> 
+        <h1> PDRB Lapangan Usaha </h1>
+</div>
+        <div content="sub_content">
+            <h3>Snapshot</h3>
+        </div>
+        <div>
+            <h4>Triwulan I</h4>
+            <iframe src="{{ url_for('static',filename='pdf/snapshottwi.pdf')}}" > </iframe>
+        </div>
+        <div>
+            <h4>Triwulan II</h4>
+            <iframe src="{{ url_for('static',filename='pdf/snapshottwii.pdf')}}" > </iframe>
+        </div>
+        <div content="sub_content">
+            <h3>Rekonsiliasi PDRB</h3>
+        </div>
+{% endblock %}

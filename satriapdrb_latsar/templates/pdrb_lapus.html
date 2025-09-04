@@ -1,0 +1,27 @@
+{% extends "base.html" %} 
+
+{% block title %} PDRB Lapangan Usaha {% endblock %}
+
+{% block content %}
+<div class="judul_konten"> 
+        <h1> PDRB Lapangan Usaha </h1>
+</div>
+        <div content="sub_content">
+            <h3>Fenomena</h3>
+        </div>
+
+<div content="fenomena"> 
+        <div>
+            <h4>Triwulan I</h4>
+            <iframe src="{{ url_for('static',filename='pdf/fenomenatwi.pdf')}}" > </iframe>
+        </div>
+        <div>
+            <h4>Triwulan II</h4>
+            <iframe src="{{ url_for('static',filename='pdf/fenomenatwii.pdf')}}" > </iframe>
+        </div>
+</div>
+
+       <div content="sub_content">
+            <h3>Rekonsiliasi PDRB</h3>
+        </div>
+{% endblock %}

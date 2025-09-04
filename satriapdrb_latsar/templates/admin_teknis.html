@@ -1,0 +1,27 @@
+{% extends "base.html" %} 
+
+{% block title %} Administrasi Dan Teknis {% endblock %}
+
+{% block content %}
+<div class="judul_konten"> 
+        <h1> Administrasi dan Teknis </h1>
+</div>
+         <div content="sub_content">
+            <h3>Panduan Teknis dan Sumber Data</h3>
+        </div>
+        <div>
+            <image src="#" alt="Gambar Metode Penghitungan PDRB">
+            <iframe src="{{ url_for('static',filename='pdf/hitung_pdrb.pdf')}}" > </iframe>
+        </div>
+
+       <div content="sub_content">
+            <h3>Materi Pembinaan PDRB</h3>
+        </div>
+
+      <div content="sub_content">
+            <h3>Alokasi Penanggung Jawab</h3>
+      </div>
+        <div>
+        <iframe src="{{ url_for('static',filename='excell/penanggung_jawab.xlsx')}}" > </iframe>
+        </div>
+{% endblock %}
